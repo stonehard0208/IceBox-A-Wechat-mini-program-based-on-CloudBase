@@ -1,0 +1,3 @@
+<view class="mycontainer">
+  <singlefood class="myfood" wx:for="{{fruits}}" wx:key="*this" item="{{item}}"></singlefood>
+</view>

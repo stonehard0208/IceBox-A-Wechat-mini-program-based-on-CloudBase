@@ -1,0 +1,7 @@
+<!--testdemo/pages/searchFail/searchFail.wxml-->
+<view class="container">
+  <view class="wrap-icon">
+    <image src="cloud://cloud1-5gfxwyhfa35bb09e.636c-cloud1-5gfxwyhfa35bb09e-1305867234/icon/message-failed.png" class="icon"></image>
+  </view>
+  <view class="hint">没有搜索到噢~请返回后重新输入！</view>
+</view>

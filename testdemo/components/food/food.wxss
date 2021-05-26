@@ -1,0 +1,54 @@
+
+.module-group{
+  padding: 40rpx;
+  background-color: #ffffff00;
+}
+
+.module-group .module-top{
+  font-size: 34rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.module-top .module-title{
+  color: #fff;
+  padding: 2rpx 10rpx;
+  background-color: #b6b6b6;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  box-shadow: 0rpx 5rpx 15rpx 2rpx rgba(0, 0, 0, 0.1);
+}
+
+.module-top .module-more{
+  color: #1597bb;
+  font-size: 28rpx;
+}
+
+.module-scroll-view{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 260rpx;
+  white-space: nowrap;
+}
+.module-scroll-view .scroll-inside{
+  width: 120rpx;
+  margin-right: 30rpx;
+  display: inline-block;
+}
+
+.mydelete{
+  color: white;
+  font-size: 25rpx;
+  background-color: #f55c47; 
+  border-radius: 50%;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-left: 4rpx;
+  margin-top: -175rpx;
+  position: absolute;
+  box-shadow: 0 0 5rpx rgba(0, 0, 0, 5);
+}
+
+.mydelete view{
+  margin-top:-3rpx
+}

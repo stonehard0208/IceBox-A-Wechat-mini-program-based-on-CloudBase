@@ -1,0 +1,73 @@
+<!--testdemo/pages/inside/inside.wxml-->
+<view>
+  <view wx:if="{{fruits.length===0&&drink.length===0&&meats.length===0&&foods.length===0}}" class="myview">
+    <view class="bgpic">
+         <image class="nullpic" src="../../image/null.png"></image>
+    </view>
+    <view class="tips-box">
+      <view class="tips-moudle">
+        <view class="tips-text">冰箱里空空如也！</view>
+        <view class="tips-text">点击按钮添加食物吧！</view>
+        <view class="add-food2" bindtap="addFood">
+          <view>+</view>
+        </view>
+        <view class="tips-box">
+          <view animation="{{animation}}" > 
+              <image src="../../image/Peach.png" class="myimg"></image>
+          </view>
+          <view animation="{{animation1}}"> 
+              <image src="../../image/cola.png" class="myimg"></image>
+          </view>
+          <view animation="{{animation}}"> 
+              <image src="../../image/Crab.png" class="myimg"></image>
+          </view>
+          <view animation="{{animation1}}">
+            <image src="../../image/Taco.png" class="myimg"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:elif="{{owndata===0}}" class="mywaiting">
+    <view class="tips-box">
+      <view class="tips-moudle">
+        <loading type="circle" class="tips-text">加载中，请稍后！</loading>
+      </view>
+    </view>
+    <view class="tips-box">
+      <view animation="{{animation}}" > 
+          <image src="../../image/Peach.png" class="myimg"></image>
+      </view>
+      <view animation="{{animation1}}"> 
+          <image src="../../image/cola.png" class="myimg"></image>
+      </view>
+      <view animation="{{animation}}"> 
+          <image src="../../image/Crab.png" class="myimg"></image>
+      </view>
+      <view animation="{{animation1}}">
+        <image src="../../image/Taco.png" class="myimg"></image>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="bg-module">
+      <food title="果蔬" items="{{fruits}}" bind:fromFood="deleteId" bind:cleanAll="cleanTypeAll"></food>
+      <view wx:if="{{fruits.length===0}}" class="empty-box">冰箱里的果蔬空空如也！</view>
+      <view class="fridgeLine"></view>
+
+      <food title="饮品" items="{{drink}}" bind:fromFood="deleteId" bind:cleanAll="cleanTypeAll"></food>
+      <view wx:if="{{drink.length===0}}"  class="empty-box">冰箱里的饮料空空如也！</view>
+      <view class="fridgeLine"></view>
+
+      <food title="肉类" items="{{meats}}" bind:fromFood="deleteId" bind:cleanAll="cleanTypeAll"></food>
+      <view wx:if="{{meats.length===0}}"  class="empty-box">冰箱里的肉类空空如也！</view>
+      <view class="fridgeLine"></view>
+
+      <food title="熟食" items="{{foods}}" bind:fromFood="deleteId" bind:cleanAll="cleanTypeAll"></food>
+      <view wx:if="{{foods.length===0}}"  class="empty-box">冰箱里的熟食空空如也！</view>
+      <view class="fridgeLine"></view>
+
+    <view class="add-food" bindtap="addFood">
+      <view class="add-x">+</view>
+    </view>
+  </view>
+</view>

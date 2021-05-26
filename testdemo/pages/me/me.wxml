@@ -1,0 +1,124 @@
+<view>
+  <view class="title-module">
+    <!-- <view wx:if="{{isAccept}}" class="title-box"> -->
+    <view  class="title-box">
+      <view class="img-module">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="name-module">
+        <view class="user-name">
+          <open-data type="userNickName"></open-data>
+        </view>
+        <view class="my-tips1">合理管理冰箱，减少粮食浪费</view>
+      </view>
+    </view>
+    <!-- <view wx:else class="title-box">
+      <view class="accept-btn" bindtap="getPromiss">点击微信授权</view>
+    </view> -->
+  </view>
+  <view class="myfunction">
+    <view class="function-module">
+      <view class="one-function" bindtap="showOuttimeNum">
+        <view class="logo-module">
+          <view class="logo-img">
+            <image src="../../image/food.png" class="rea-img"></image>
+          </view>
+          <view class="pass-food">过期食品</view>
+        </view>
+        <view class="pass-num">{{countFood}}</view>
+      </view>
+      <view class="one-function" bindtap="showPieChart">
+        <view class="logo-module">
+          <view class="logo-img">
+            <image src="../../image/level.png" class="rea-img"></image>
+          </view>
+          <view class="pass-food">我的节约粮食水平</view>
+        </view>
+        <view wx:if="{{level>100}}" class="phy-module">
+          <view class="phy-level">100</view>
+        </view>
+        <view wx:if="{{level==100}}" class="phy-module100">
+          <view class="phy-level">{{level}}</view>
+        </view>
+        <view wx:elif="{{level<100&&level>=90}}" class="phy-module">
+          <view class="phy-level">{{level}}</view>
+        </view>
+        <view wx:elif="{{level<90&&level>=80}}" class="phy-module1">
+          <view class="phy-level">{{level}}</view>
+        </view>
+        <view wx:elif="{{level<80&&level>=60}}" class="phy-module8">
+          <view class="phy-level">{{level}}</view>
+        </view>
+        <view wx:elif="{{level<60&&level>=20}}" class="phy-module6">
+          <view class="phy-level">{{level}}</view>
+        </view>
+        <view wx:elif="{{level<20&&level>=0}}" class="phy-module2">
+          <view class="phy-level">{{level}}</view>
+        </view>
+        <view wx:elif="{{level<0}}" class="phy-module0">
+          <view class="phy-level">{{level}}</view>
+        </view>
+      </view>
+      <view class="one-function" bindtap="showCard">
+        <view class="logo-module">
+          <view class="logo-img">
+            <image src="../../image/cards.png" class="rea-img"></image>
+          </view>
+          <view class="pass-food">卡牌盒子</view>
+        </view>
+        <view class="pass-num">{{getCardNum}}/42</view>
+      </view>
+      <view class="two-function">
+        <view class="logo-module">
+          <view class="logo-img">
+            <image src="../../image/tips.png" class="rea-img"></image>
+          </view>
+          <view class="title-tips">减少粮食浪费小妙招</view>
+        </view>
+        <view class="my-tips">
+          <view>1.按需采购</view>
+          <view>2.合理存储食物</view>
+          <view>3.珍惜剩余食物</view>
+          <view>4.及时清理冰箱</view>
+          <view>5.养成更健康且可持续的健康饮食习惯</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 过期数量弹窗 -->
+<!-- 蒙版 -->
+<view class="modal-mask" bindtap="hideLeftCount" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>
+<view class="modal-dialog" wx:if="{{showModal1}}">
+  <view class="modal-title">已过期的食品</view>
+  <view class="modal-content">
+    <view class="modal-logo">
+      <image src="../../image/food.png" class="modal-img"></image>
+    </view>
+    <view class="modal-numcontent">当前数量：{{countFood}}</view>
+    <view wx:if="{{countFood<0}}" class="modal-tips">
+      <view>当前没有过期的食品！</view>
+      <view>请继续保持！</view>
+    </view>
+    <view wx:else class="modal-tips">快快去清理冰箱吧~</view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="myConform1" data-status="confirm">确认</view>
+  </view>
+</view>
+<!-- 节约粮食水平弹窗 -->
+<view class="modal-mask" bindtap="hideLeftCount" catchtouchmove="preventTouchMove" wx:if="{{showModal2}}"></view>
+<view class="modal-dialog1" wx:if="{{showModal2}}">
+  <view class="modal-title">已处理食品统计</view>
+  <view class="modal-content">
+    <view class="line">
+      <ec-canvas canvas-id="mychart-multi" ec="{{ecage}}"></ec-canvas>
+    </view>
+    <view class="modal1-tips">
+      <view>要注意爱惜粮食啊！</view>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="myConform1" data-status="confirm">确认</view>
+  </view>
+</view>

@@ -1,0 +1,81 @@
+.item-navigator{
+  width: 120rpx;
+  margin-right: 28rpx;
+  display: inline-block;
+}
+
+.item-navigator .item-group{
+  width: 100%;
+}
+.item-group .image-item-group{
+  width: 100%;
+  height: 120rpx;
+}
+
+.image-item-group .item-img{
+  width: 100%;
+  height: 100%;
+}
+.item-group .item-title{
+  
+  width: 90rpx;
+  /* background: #fbe0c4; */
+  /* border: black solid 1px; */
+  
+  /* opacity: 80%; */
+  
+  
+  font-size: 20rpx;
+  text-align: center;
+  
+
+  margin-left: 35rpx;
+  margin-top: -40rpx;
+  position: absolute;
+
+  
+  /* box-shadow: 0 0 5rpx rgba(0, 0, 0, 5); */
+}
+
+.item-title view{
+  padding: 5rpx 10rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background-color: #1597bbc9;
+  color: white;
+  border-radius: 15rpx;
+
+}
+.item-group .item-leftdata{
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  background-color: #eee;
+  box-shadow: 0rpx 5rpx 15rpx 2rpx rgba(0, 0, 0, 0.1);
+  border-radius: 25%;
+}
+
+.item-group .item-leftdataless{
+  font-size: 28rpx;
+  color: #eee;
+  text-align: center;
+  margin-top: 20rpx;
+  background-color: #f55c47;
+  box-shadow: 0rpx 5rpx 15rpx 2rpx rgba(0, 0, 0, 0.1);
+  border-radius: 25%;
+  padding-bottom: 3rpx;
+  padding-top: 3rpx;
+}
+
+.mydelete{
+  color: white;
+  font-size: 25rpx;
+  background-color: #f55c47; 
+  border-radius: 50%;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-left: -2rpx;
+  margin-top: -175rpx;
+  position: absolute;
+  box-shadow: 5rpx 5rpx 2rpx 2rpx black;
+}

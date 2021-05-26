@@ -1,0 +1,16 @@
+
+<!--节约粮食-->
+
+ <view class="news">
+  <view class="news-title">{{newsList.title}}</view>
+  <view class="news-author">{{newsList.author}}</view>
+  <view class="news-time">{{newsList.time}}</view>
+  <image class="news-pic" src="{{newsList.newsImageUrl1}}" mode="aspectFill"></image>
+  <view  wx:for="{{contentList}}" data-index="{{index}}" wx:for-index="index" wx:key="key"> 
+    <view class="news-content"> {{contentList[index]}} </view>
+    <image class="news-pic" src="{{newsList.newsImageUrl2}}" mode="aspectFill" wx:if="{{index==newsList.image2idx}}"></image>
+    <image class="news-pic" src="{{newsList.newsImageUrl3}}" mode="aspectFill" wx:if="{{index==newsList.image3idx}}"></image>
+  </view>
+  
+  
+ </view>

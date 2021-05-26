@@ -1,0 +1,53 @@
+<!--testdemo/pages/imgRecognition/imgRecognition.wxml-->
+
+  <view class="fruitImgGroup">
+    <image src='{{bannerUrl}}' mode="aspectFit" class="img" bindtap="upLoadImg"></image>
+  </view>
+  <view class="button-group">
+  <button bindtap="upLoadImg" class="upLoad" style="width:35vw;margin-left:10vw">上传果蔬</button>
+  <button bindtap="turnToBase64" class="startRecognition" style="width:35vw;margin-right:10vw">开始识别</button>
+</view>
+<!-- <popup id='popup'
+      title='识别结果'
+      content='名称：{{result}} 相似度：{{score}}%'
+      btn_ok='确认'
+      bind:error="_error"
+      bind:success="_success"></popup> -->
+
+<!-- 
+<view class="recogResult">
+  <view class="recogResult-left" wx:for="{{result}}" wx:for-index="index" data-index="{{index}}">{{result[index]}}</view>
+  <view class="recogResult-right"  wx:for="{{score}}" wx:for-index="index" data-index="{{index}}">{{score[index]}}</view>
+</view> -->
+<wxs module="we">
+ var toFixed = function (value) {
+ return value.toFixed(2);
+  }
+  module.exports = {
+    toFixed :toFixed
+  }
+</wxs>
+
+<view class="recogResult"  wx:for="{{returnResult}}" wx:for-item="result">
+  <view class="recogResult-left">{{result.name}}</view>
+  <view>
+    <view class="recogResult-center">相似度:</view>
+    <view class="recogResult-right" max->{{we.toFixed(result.score)}}</view>
+  </view>
+</view>
+
+
+<!-- <view class="bottompic-group">
+  <image src="{{bottom1}}" class="bottompic"></image>
+  <image src="{{bottom2}}" class="bottompic"></image>
+  <image src="{{bottom3}}" class="bottompic"></image>
+  <image src="{{bottom4}}" class="bottompic"></image>
+  <image src="{{bottom5}}" class="bottompic"></image>
+  <image src="{{bottom6}}" class="bottompic"></image>
+  <image src="{{bottom7}}" class="bottompic"></image>
+  <image src="{{bottom8}}" class="bottompic"></image>
+  <image src="{{bottom9}}" class="bottompic"></image>
+  <image src="{{bottom10}}" class="bottompic"></image>
+</view> -->
+
+

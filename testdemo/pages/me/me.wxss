@@ -1,0 +1,312 @@
+.title-module{
+  width: 100%;
+  height: 190rpx;
+  flex-direction: column;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #226c89;
+  padding-bottom: 50rpx;
+  /* border-top: solid #13809e 1rpx; */
+}
+
+.title-box{
+  position: absolute;
+  margin-top: 5%;
+  width: 78%;
+  height: 350rpx;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 16rpx;
+  box-shadow: 0rpx 5rpx 15rpx 13rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 获取权限按钮 */
+.accept-btn{
+  padding: 20rpx;
+  border-radius: 20rpx;
+  box-shadow:  0rpx 5rpx 13rpx 5rpx rgba(0, 0, 0, 0.1);
+  background-color: rgb(93, 185, 153);
+  color: #eeeeee;
+  font-size: 32rpx;
+}
+
+.img-module{
+  height: 130rpx;
+  width: 130rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  box-shadow: 0 0 2rpx rgba(0, 0, 0, 5);
+}
+.myimg{
+  height: 150rpx;
+  width: 150rpx;
+}
+
+.name-module{
+  /* margin-top: 10rpx; */
+  text-align: center;
+}
+.name-module .user-name{
+  font-size: 36rpx;
+}
+.name-module .my-tips1{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #c5c5c5;
+}
+.myfunction{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+.function-module{
+  background-color: white;
+  width: 87%;
+  /* border: 1px solid #dedede; */
+  border-radius: 32rpx;
+  box-shadow: 0rpx 5rpx 55rpx 5rpx rgba(0, 0, 0, 0.1);
+  margin-top: 25%;
+  margin-bottom: 40rpx;
+}
+
+.function-module .one-function{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  height: 150rpx;
+  align-items: center;
+  border-top: solid #eeeeee 1rpx;
+}
+
+.function-module .two-function{
+  /* display: flex; */
+  /* justify-content: left; */
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  height: 350rpx;
+  border-top: solid #eeeeee 1rpx;
+  padding-top: 40rpx;
+  
+}
+
+.pass-food{
+  font-size: 32rpx;
+  padding-top: 10rpx;
+}
+
+.pass-num{
+  color: #7c7b7b;
+  font-size: 28rpx;
+  padding-right: 35rpx;
+}
+
+.phy-module{
+  width: 120rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(93, 185, 153);
+}
+
+.phy-module1{
+  width: 120rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(167, 187, 119);
+}
+
+.phy-module8{
+  width: 120rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(216, 199, 123);
+}
+
+.phy-module6{
+  width: 120rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(219, 144, 58);
+}
+
+.phy-module2{
+  width: 120rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(207, 90, 90);
+}
+
+.phy-module0{
+  width: 120rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(255, 0, 0);
+}
+
+.phy-module100{
+  width: 120rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(108, 214, 177);
+}
+
+
+.phy-level{
+  color: #eeeeee;
+  font-size: 35rpx;
+}
+
+.title-tips{
+  font-size: 32rpx;
+  margin-top: 10rpx;
+}
+.my-tips{
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #7c7b7b;
+}
+.my-tips view{
+  margin-bottom: 10rpx;
+  padding-left: 45rpx;
+}
+
+.logo-module{
+  width: 100%;
+  display: flex;
+}
+.logo-module .logo-img{
+  height: 60rpx;
+  width: 60rpx;
+}
+
+.rea-img{
+  height: 50rpx;
+  width: 50rpx;
+}
+
+/* 过期数量弹窗样式 */
+.modal-mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+.modal-dialog{
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+  
+}
+.modal-dialog1{
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+  
+}
+
+.modal-title{
+  padding: 20rpx;
+  font-size: 35rpx;
+  color: #030303;
+  text-align: center;
+  border-bottom: 1rpx solid #dedede;
+}
+.modal-content{
+  /* background-color: #eee; */
+  padding: 30rpx 30rpx;
+  font-size: 32rpx;
+  text-align: center;
+  color: #7c7b7b;
+}
+
+/* .modal-numcontent{
+  margin-bottom: 15rpx;
+} */
+
+.modal-tips{
+  margin-bottom: 10rpx;
+}
+
+.modal-footer{
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+.btn-confirm{
+  width: 100%;
+  color: #ec5300;
+  text-align: center;
+}
+.modal-logo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15rpx;
+}
+.modal-logo .modal-img{
+  width: 70rpx;
+  height: 70rpx;
+}
+.modal-content .line{
+  width: 550rpx;
+  height: 400rpx;
+  margin-left: -40rpx;
+  /* margin-bottom: 40rpx; */
+}
+/* 图表下方的语句 */
+.modal-content .modal1-tips{
+  position: absolute;
+  margin-top: -60rpx;
+  margin-left: 23%;
+}

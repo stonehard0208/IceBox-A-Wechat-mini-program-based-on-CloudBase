@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/begin/begin",
+    "pages/inside/inside",
+    "pages/index/index",
+    "pages/science_page/science_page",
+    "pages/index1/index1",
+    "pages/me/me",
+    "pages/mycard/mycard",
+    "pages/guidance/guidance",
+    "pages/todo/todo",
+    "pages/add/add",
+    "pages/edit/edit",
+    "pages/list/list",
+    "pages/science-info/science-info",
+    "pages/searchFail/searchFail",
+    "pages/news_page/news_page",
+    "pages/imgRecognition/imgRecognition"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#226c89",
+    "navigationBarTitleText": "冰盒食记",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "cloud": true,
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "#226c89",
+    "list": [
+      {
+        "selectedIconPath": "image/list1.png",
+        "iconPath": "image/list0.png",
+        "pagePath": "pages/todo/todo",
+        "text": "清单"
+      },
+      {
+        "selectedIconPath": "image/ref1.png",
+        "iconPath": "image/ref0.png",
+        "pagePath": "pages/inside/inside",
+        "text": "冰箱"
+      },
+      {
+        "selectedIconPath": "image/scan1.png",
+        "iconPath": "image/scan0.png",
+        "pagePath": "pages/imgRecognition/imgRecognition",
+        "text": "识别"
+      },
+      {
+        "selectedIconPath": "image/science1.png",
+        "iconPath": "image/science0.png",
+        "pagePath": "pages/science_page/science_page",
+        "text": "科普"
+      },
+      {
+        "selectedIconPath": "image/me1.png",
+        "iconPath": "image/me0.png",
+        "pagePath": "pages/me/me",
+        "text": "我"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+<view class="container">
+  <view class="top">
+    <view class="first">
+      <image class="ico" src="{{iconPath}}" bindtap="showDialogBtn" />
+      <input value="{{name}}" class="name" placeholder="食物名称" placeholder-class="phcolor" bindinput="nameInput"
+        bindconfirm="nameConfirm" bindblur="nameConfirm" />
+    </view>
+    <view class="second">
+      <view class="time">
+        <view class="timecontent">
+          <text class="timename">购买日期:</text>
+          <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1"
+            bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+            <view class="timedetail">
+              {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}}
+              {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="expirationdate">
+        <text class="datename">保质期限:</text>
+        <picker mode="selector" value="{{index}}" bindchange="changeDate" range="{{dateArray}}">
+          <view class="datedetail">{{dateArray[index]}}</view>
+        </picker>
+        <text class="daytext">天</text>
+      </view>
+      <view class="recommendation">
+        <view class="retext">({{iconName}}的最佳保质期为{{freshday}}天，建议在最佳保质期内食用哦！)</view>
+      </view>
+      <view class="pic">
+        <image class="image" src="{{tempFilePath}}" mode="aspectFit" bindtap="chooseimage" />
+      </view>
+      <view class="bottom">
+        <button class="take" bindtap="takeOut">取消</button>
+        <button class="save" bindtap="saveAll">保存</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <!-- <view class="modal-title">选择食物类型</view> -->
+  <!-- <view class="modal-title">
+    <picker bindchange="bindPickerChange" value="{{categoryID}}" range="{{array}}">
+    <view>
+      食品种类选择：<text class="pickerType">{{array[categoryID]}}</text>
+    </view>
+  </picker> -->
+  <!-- start-->
+  <view>
+    <view class="modal-title" >
+      选定食品种类：<text class="pickerType" bindtap="toggleDialog">{{value}}</text>
+    </view>
+  </view>
+
+  
+  <view class="modal-content">
+    <block wx:for="{{icons}}" wx:for-item="ico" wx:key="icoi">
+      <image class="modal-icon" src="{{ico.path}}" bindtap="iconChoose" id="{{ico.Enname}}" />
+    </block>
+  </view>
+</view>
+
+
+<view class="free-dialog {{ showDialog ? 'free-dialog--show' : '' }}">
+    <view class="free-dialog__mask" bindtap="toggleDialog" />
+    <view class="free-dialog__container">
+      <view style="padding: 5% 5% 15%;">
+        <form bindsubmit='submit' bindreset="reset">
+          <view bindtap='freetoBack' class="free-button free-dialog-reset">取消</view>
+          <view bindtap='freeBack' class="free-button free-dialog-submit">确定</view>
+
+          <radio-group class='free-radios' bindchange="radioChange">
+            <label class="free-radio" bindtap="click" wx:for="{{items}}" wx:key="items" data-id="{{index}}"
+              style="{{index==id?'background:#a2ccc8;color:#fff;':'background:#fff;color:#000;'}}">
+              <radio value="{{item.name}}" name="{{item.value}}"></radio>
+              <label class="free-text">{{item.value}}</label>
+            </label>
+          </radio-group>
+        </form>
+
+      </view>
+    </view>
+    <!-- end-->
+  </view>

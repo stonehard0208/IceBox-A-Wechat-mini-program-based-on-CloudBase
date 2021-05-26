@@ -1,0 +1,15 @@
+
+<view url="{{itemurl}}" class="item-navigator">
+  <view class="item-group">
+    <view class="image-item-group">
+      <image class="item-img" src='{{item.img}}'></image>
+    </view>
+    <view class="item-title">
+      <view>{{item.food_name}}</view>
+    </view>
+    <view wx:if="{{item.left_date>=0}}" class="item-leftdata">剩{{item.left_date}}天</view>
+    <view wx:else class="item-leftdataless">过期{{-item.left_date}}天</view>
+  </view>
+</view>
+
+

@@ -1,0 +1,46 @@
+
+
+<view class="bg-group"  wx:for="{{searchList}}" wx:for-item="item" wx:key="key">
+    <image class="poster-bg" src="{{item.science_img_url}}"></image>
+    <view class="image-wrap">
+      <image src="{{item.science_img_url}}" mode="aspectFill" class="img" />
+    </view>
+</view>
+<view  wx:for="{{searchList}}" wx:for-item="item" wx:key="key" class="food-box">
+  <view class="food-title">
+    {{item.Zhname}}
+  </view>  
+  <view class="science-info-group">
+    <view class="science-short-moduel">
+      <view class="science-short-item">
+        <view class="science-icon">
+          <image src="../../image/date.png" class="science-icon"></image>
+        </view>
+        <view class="cal">
+          保质期：{{item.freshday}}天
+        </view>
+      </view>
+      <view class="science-short-item">
+        <view class="science-icon">
+          <image src="../../image/cal.png" class="science-icon"></image>
+        </view>
+        <view class="cal">
+          热量：{{item.cal}}大卡/100g
+        </view>
+      </view>
+      <view class="science-short-item">
+        <view class="science-icon">
+          <image src="../../image/type.png" class="science-icon"></image>
+        </view>
+        <view class="cal">
+        类型：{{item.type}}
+        </view>
+      </view>
+    </view>
+    <view class="science-info-box">
+      <view class="science-info">
+        {{item.science_info}}
+      </view>
+    </view>
+  </view>
+</view>

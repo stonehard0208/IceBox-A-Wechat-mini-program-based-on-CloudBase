@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "singlefood": "/components/singlefood/singlefood"
+  }
+}

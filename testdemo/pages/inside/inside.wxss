@@ -1,0 +1,121 @@
+page {
+  background-color: #226c89;
+}
+
+/* .myview{
+  width: 100%;
+} */
+
+.fridgeLine{
+  background: #226c89;
+  /* width: 100%; */
+  height: 10rpx;
+  margin-top: -90rpx;
+}
+.tips-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 40rpx;
+  margin-left: 15%; */
+}
+.tips-moudle{
+  width: 60%;
+  padding: 20rpx 20rpx;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tips-moudle .tips-text{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+}
+
+.add-img{
+  margin-top: 50rpx;
+  /* margin-right: 20rpx; */
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.bgpic{
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nullpic{
+  width: 300rpx;
+  height: 300rpx;
+}
+.bg-module{
+  /* background-color: #aad8d3; */
+  background-color: #e3f5ff;
+  border: 30rpx #226c89 solid
+}
+.add-food{
+  position: fixed;
+  margin-left: 40%;
+  bottom: 40rpx;
+  width: 100rpx;
+  height: 100rpx; 
+  background-color: #226c89;
+  border-radius: 50%;
+  display: flex;
+  color: #ffffff;
+  font-size: 100rpx;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5rpx rgba(0, 0, 0, 5);
+}
+.add-food view{
+  margin-top: -16rpx;
+}
+
+.add-food2{
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  width: 100rpx;
+  height: 100rpx; 
+  background-color: #1597bb;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 100rpx;
+  box-shadow: 0 0 5rpx rgba(0, 0, 0, 5);
+  text-align: center;
+}
+.add-food2 view{
+  margin-top: -24rpx;
+  /* margin-left: 14rpx;
+  margin-bottom: 24rpx; */
+}
+/* .bg-module .empty-modlue{
+  width: 100%;
+} */
+
+.empty-box{
+  position: absolute;
+  color: #226c8973;
+  font-size: 32rpx;
+  margin-top: -260rpx;
+  margin-left: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myimg{
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: 20%;
+}
+
+.mywaiting{
+  margin-top: 35%;
+}

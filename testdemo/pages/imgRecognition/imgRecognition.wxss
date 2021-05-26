@@ -1,0 +1,70 @@
+/* testdemo/pages/imgRecognition/imgRecognition.wxss */
+page{
+  background:#226c89;
+}
+.button-group{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 6vh;
+}
+.upLoad, .startRecognition{
+  height: 8vh;
+  background-color: #ffffff;
+  color: #226c89;
+  /* color: lightblue; */
+  /* margin: 30rpx; */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  /* display: inline; */
+  border-radius: 50rpx;
+  line-height: 5vh;
+  font-size: 36rpx;
+}
+
+.fruitImgGroup{
+  margin: 40rpx 60rpx;
+  display: flex;
+  justify-content: center;
+  border: 4rpx #eee solid;
+  border-radius: 20rpx;
+  background-color:#accdda;
+}
+
+.img{
+  height: 40vh;
+}
+
+.recogResult{
+  /* width: 100vw; */
+  /* align-items: center;
+  display: flex;
+  justify-content: center; */
+  background-color: #fff;
+  height: 8vh;
+  border-radius: 10rpx;
+  margin: 3vh 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+}
+
+.recogResult-left{
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #226c89;
+}
+
+.recogResult-center{
+  font-weight: bold;
+  font-size: 25rpx;
+  color: gray;
+}
+
+.recogResult-right{
+  font-size: 25rpx;
+  color: gray;
+}

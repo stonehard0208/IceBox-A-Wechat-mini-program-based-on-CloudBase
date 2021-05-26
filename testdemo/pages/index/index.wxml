@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top">
+    <image class="tag" src="../../icon/memo1.png" bindtap="gotoTodo"/>
+    <image class="handleup" src="../../icon/handle.png" bindtap="gotoInside"/>
+  </view>
+  <view class="middle">
+    <view class="light1"></view>
+    <view class="light2"></view>
+    <image class="handledown" src="../../icon/handle.png" bindtap="gotoInside"/>
+  </view>
+  <view class="bottom"></view>
+</view>

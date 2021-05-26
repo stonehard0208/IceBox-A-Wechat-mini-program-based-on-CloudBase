@@ -1,0 +1,10 @@
+.mycontainer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50rpx;
+}
+
+.myfood{
+  padding: 10rpx;
+}

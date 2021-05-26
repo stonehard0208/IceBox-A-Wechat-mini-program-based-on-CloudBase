@@ -1,0 +1,29 @@
+/* testdemo/pages/searchFail/searchFail.wxss */
+.container {
+  /* background-color: darkgray; */
+  height: 100vh;
+  width: 100%;
+}
+
+.container .hint{
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .wrap-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200rpx;
+  height: 200rpx;
+  margin:0 auto;
+  margin-top: 30rpx;
+
+}
+
+.wrap-icon .icon{
+  width:200rpx;
+  height: 200rpx;
+}

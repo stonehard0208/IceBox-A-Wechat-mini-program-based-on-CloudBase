@@ -1,0 +1,63 @@
+
+<view class = "container">
+  <view class = "today">
+    <text>{{Today}}</text>
+  </view>
+  <view class = "additem">
+    <view class = "add">
+      <image class = 'plus' src = '../../icon/plus.png' />
+      <input value = "{{input}}" class = "InputAdd" placeholder='请输入购物计划' bindinput='AddInput' bindconfirm='AddConfirm'/>
+    </view>  
+  </view>
+  <view class = "todo-today1">
+    <view class = "todo-today">
+      <view wx:if="{{isEmpty}}">
+        <view class="empty">购物清单已清空！</view>
+      </view>
+      <view wx:elif="{{!isEmpty}}">
+        <view class = "today-item" wx:for = "{{TodayList}}" wx:key="index" bindtap="toggleTodoHandle" id = "{{index}}"   >
+          <icon size="40rpx" class = "itemcheckbox"   type = "{{item.completed ? 'success' : 'circle'}}"   color="white"/>
+          <text class = "{{item.completed ? 'itemdescriptiontcompleted':'itemdescriptiont'}}" >{{item.description}}</text>
+          <image class="addref" src="../../icon/addref.png" bindtap="addIntoRefHandle" id = '{{index}}'/>
+          <icon size="40rpx" class = 'itemremove' type = 'clear' color = "white" bindtap="removeTodoHandle" id = '{{index}}' />
+        </view>
+        <view class="footer">
+          <text class="allcompleted" bindtap="toggleAllHandle">选择全部</text>
+          <text class="itemnum">{{itemnum}} items left</text>
+          <text class="clearall" bindtap="removeAllHandle">清空列表</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">提示</view>
+  <view class="modal-tips">请尽快处理这些食物哦~</view>
+  <view class="modal-content" scroll-y="true" bindscrolltoupper="sc">
+      <view class="goods">
+    <view class="f_item"
+    wx:for="{{goods_list}}"
+    wx:key="id"
+    bindtap="jumpTo"
+    >
+      <image src="{{item.img}}"></image>
+      <view class="text">{{item.food_name}}</view>
+      <view class="fresh_day">
+      <view wx:if="{{item.left_date<=0}}">
+        <view  class="fresh_day_red">{{item.left_date}}天</view>
+      </view>
+      <view wx:elif="{{item.left_date<1}}">
+        <view  class="fresh_day_blue">{{item.left_date}}天</view>
+      </view>
+      <view wx:else>
+        <view  class="fresh_day_green">{{item.left_date}}天</view>
+      </view></view>
+    </view>
+  </view></view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

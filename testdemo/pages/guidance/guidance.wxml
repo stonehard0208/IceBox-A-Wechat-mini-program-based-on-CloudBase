@@ -1,0 +1,18 @@
+<!--pages/guidance/guidance.wxml-->
+<view class='guidance-cont' wx:if="{{isTiptrue}}">
+  <swiper class="banner_box" bindchange="fike" indicator-dots="true" indicator-active-color='#fff'>
+      <swiper-item  class="img_b">    
+          <image class="img_log" src="../../icon/guidance/1.png"/>
+      </swiper-item>
+      <swiper-item  class="img_b">    
+          <image class="img_log" src="../../icon/guidance/2.png"/>
+      </swiper-item>
+      <swiper-item  class="img_b">    
+          <image class="img_log" src="../../icon/guidance/3.png"/>
+      </swiper-item> 
+      <swiper-item>    
+          <image class="img_log" src="../../icon/guidance/4.png"/>
+      </swiper-item> 
+  </swiper>
+  <view class='bottom' bindtap='getIndex' wx:if="{{ swiperCurrent+1 == swiperMaxNumber }}">开启体验之旅</view>
+</view>

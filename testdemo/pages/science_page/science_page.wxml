@@ -1,0 +1,46 @@
+<view class="searchbar">
+  <!-- <navigator url='/pages/science/science' class='search-navigator'></navigator> -->
+  <view class="search-input-group">
+    <input class='search-input' placeholder='输入食物名称' bindconfirm="searchFunction" bindinput="getInputData" value="{{inputsearch}}"></input>
+  </view>
+</view>
+
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+ 
+
+
+
+<!--节约粮食-->
+<view hidden="{{currentTab!==0}}">
+  <view class="newsContainer">
+    <view class="news" wx:for="{{newsList}}" wx:for-item="item" wx:key="key" bindtap="toNewsPage" data-title='{{item.title}}'>
+      <view class="news-title">{{item.title}}</view>
+      <view class="news-pic-group">
+        <image class="news-pic" src="{{item.newsImageUrl1}}"></image>
+        <image class="news-pic" src="{{item.newsImageUrl2}}"></image>
+        <image class="news-pic" src="{{item.newsImageUrl3}}"></image>
+      </view>
+      <view class="news-author">{{item.author}}</view>
+      <view class="news-time">{{item.time}}</view>
+    </view>
+  </view>
+</view>
+
+<!--食物科普-->
+<view hidden="{{currentTab!==1}}">
+  <view class="container">
+    <view class="food-group" wx:for="{{foodList}}" wx:for-item="item" wx:key="key" bindtap="toFoodScienceInfo" data-name='{{item.Zhname}}' >
+      <image src="{{item.science_img_url}}" class="food-image"></image>
+      <view class="info-group">
+        <view class="name-group">{{item.Zhname}}</view>
+        <view class="cal">保质期：{{item.freshday}}天</view>
+        <view class="science">{{item.science}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+

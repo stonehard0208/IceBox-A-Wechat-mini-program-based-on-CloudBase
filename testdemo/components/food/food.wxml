@@ -1,0 +1,15 @@
+<view class="module-group">
+    <view class="module-top">
+      <view class="module-title">{{title}}</view>
+      <view hidden="{{noShow}}" class="module-more" bindtap="cancle">取消选择</view>
+      <view class="module-more" bindtap="deleteAll" data-title="{{title}}">清空</view>
+    </view>
+    <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+      <view wx:for="{{items}}" wx:key="_id" class="scroll-inside">
+        <singlefood  item="{{item}}"  myid="{{item._id}}" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress" bindtap="handleClick" data-id="{{item._id}}" ></singlefood>
+        <view hidden="{{noShow}}" class="mydelete" bindtap="deleteOneFood" data-id="{{item._id}}" data-leftdate="{{item.left_date}}" data-type="{{item.type}}">
+          <view>x</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>

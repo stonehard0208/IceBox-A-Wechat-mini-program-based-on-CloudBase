@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "food": "/components/food/food",
+    "loading": "/components/loading/loading"
+  }
+}

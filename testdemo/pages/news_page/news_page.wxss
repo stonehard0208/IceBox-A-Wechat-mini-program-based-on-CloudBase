@@ -1,0 +1,36 @@
+/* testdemo/pages/news_page/news_page.wxss */
+.news{
+  padding: 4vh 4vw;
+}
+
+.news-title{
+  font-size: 43rpx;
+  margin-bottom: 35rpx;
+  font-weight: 600;
+}
+
+.news-content{
+  margin-top: 30rpx;
+  line-height: 1.5rem;
+  font-size: 33rpx;
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.news-pic{
+  width: 100%;
+  margin-top: 40rpx;
+  align-items: center;
+}
+
+.news-author{
+  font-size: 25rpx;
+  color:darkgray;
+  display: inline;
+}
+ .news-time{
+  font-size: 25rpx;
+  color:darkgray;
+  margin-left: 18rpx;
+  display: inline;
+}

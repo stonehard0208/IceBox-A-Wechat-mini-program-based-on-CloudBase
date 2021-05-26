@@ -1,0 +1,87 @@
+<!--pages/mycard/mycard.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="head"><open-data type="userAvatarUrl"></open-data></view>
+    <view class="word">
+      <view class="username">
+        <open-data type="userNickName"></open-data>
+      </view>
+      <text>已解锁{{unlockedNum}}个食品！</text>
+    </view>
+    <view class="btn" bindtap="showDialogBtn">查看攻略</view>
+  </view>
+  <view class="bottom">
+    <!-- 果蔬  -->
+    <view class="box">
+      <view class="title">果蔬（{{fruitnum}}个）</view>
+      <view class="content">
+        <block wx:for="{{fruitcard}}" wx:for-item="card" wx:key="key">
+          <image class="cardImg" src="{{card.cardPath}}" bindtap="showCard" data-item="{{card}}">
+            <view class="{{card.num>=10? 'cardmaskComplete' : 'cardmask'}}"/>
+            <image class="lock" src="{{card.num>=10? '' : '../../icon/lock.png'}}"/>
+          </image>
+        </block>
+      </view>
+      <view class="down">
+        <view class="sum">已解锁果蔬 {{comFruit}}/23</view>
+       </view>
+    </view>
+    <!-- 肉类  -->
+     <view class="box">
+      <view class="title">肉类（{{meatnum}}个）</view>
+      <view class="content">
+        <block wx:for="{{meatcard}}" wx:for-item="card" wx:key="icar">
+          <image class="cardImg" src="{{card.cardPath}}" bindtap="showCard" data-item="{{card}}">
+            <view class="{{card.num>=10? 'cardmaskComplete' : 'cardmask'}}"/>
+            <image class="lock" src="{{card.num>=10? '' : '../../icon/lock.png'}}"/>
+          </image>
+        </block>
+      </view>
+      <view class="down">
+        <view class="sum">已解锁肉类 {{comMeat}}/6</view>
+      </view>
+    </view>
+    <!-- 熟食  -->
+     <view class="box">
+      <view class="title">熟食（{{delinum}}个）</view>
+      <view class="content">
+        <block wx:for="{{delicard}}" wx:for-item="card" wx:key="index">
+          <image class="cardImg" src="{{card.cardPath}}" bindtap="showCard" data-item="{{card}}">
+            <view class="{{card.num>=10? 'cardmaskComplete' : 'cardmask'}}"/>
+            <image class="lock" src="{{card.num>=10? '' : '../../icon/lock.png'}} "/>
+          </image>
+        </block>
+      </view>
+      <view class="down">
+        <view class="sum">已解锁熟食 {{comDeli}}/9</view>
+       </view>
+    </view>
+    <!-- 饮品  -->
+     <view class="box">
+      <view class="title">饮品（{{drinknum}}个）</view>
+      <view class="content">
+        <block wx:for="{{drinkcard}}" wx:for-item="card" wx:key="icar">
+          <image class="cardImg" src="{{card.cardPath}}" bindtap="showCard" data-item="{{card}}">
+            <view class="{{card.num>=10? 'cardmaskComplete' : 'cardmask'}}"/>
+            <image class="lock" src="{{card.num>=10? '' : '../../icon/lock.png'}}"/>
+          </image>
+        </block>
+      </view>
+      <view class="down">
+        <view class="sum">已解锁饮品 {{comDrink}}/4</view>
+       </view>
+    </view>
+  </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">卡牌收集攻略</view>
+  <view class="modal-content">
+    当您连续10次在某样食品过期前将其吃完，即可获得该食物的精美卡牌。快来解锁心仪的食物卡牌吧~
+  </view>
+  <view class='dialog-footer'>
+    <button class='dialog-btn' bindtap="hideModal">了解</button>
+  </view>
+</view>
