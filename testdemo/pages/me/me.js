@@ -62,14 +62,7 @@ Page({
     var that = this;
     that.getLeftAndNorCount();
     that.getNowLeft();
-   wx.cloud.callFunction({
-     name:'countCardNum',
-     success:res=>{
-       this.setData({
-        getCardNum:res.result.total
-       })
-     }
-   })
+   
   },
   //=============获取用户权限================//
   getPromiss:function(){
@@ -133,6 +126,14 @@ Page({
     var that = this;
     // that.getLeftAndNorCount();
     that.onReady();
+    wx.cloud.callFunction({
+     name:'countCardNum',
+     success:res=>{
+       this.setData({
+        getCardNum:res.result.total
+       })
+     }
+   })
   },
 
   //===========现在冰箱里过期食品数量================//
@@ -182,8 +183,11 @@ Page({
             })
             console.log("countNor",that.data.countNor);
             that.setData({
-              level:100+this.data.countNor-this.data.countLeft
+              level:100+this.data.countNor-this.data.countLeft*5
             })
+            // that.setData({
+            //   level:float(this.data.countNor/(this.data.countNor+this.data.countLeft))
+            // })
             //传入全局变量
             app.globalData.waste_fruit=this.data.waste_fruit;
             app.globalData.waste_drink=this.data.waste_drink;

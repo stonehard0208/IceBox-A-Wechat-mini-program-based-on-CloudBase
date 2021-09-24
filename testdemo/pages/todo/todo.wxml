@@ -5,7 +5,7 @@
   </view>
   <view class = "additem">
     <view class = "add">
-      <image class = 'plus' src = '../../icon/plus.png' />
+      <image class = 'plus' src = '../../icon/plus.png' bindtap="AddConfirm"/>
       <input value = "{{input}}" class = "InputAdd" placeholder='请输入购物计划' bindinput='AddInput' bindconfirm='AddConfirm'/>
     </view>  
   </view>
