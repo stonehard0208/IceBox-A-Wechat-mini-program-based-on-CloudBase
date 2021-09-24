@@ -20,7 +20,7 @@ typora-root-url: img
 
 ## 功能界面：
 
-![1](/1.JPG)
+![1](img/1.JPG)
 
 ![2](/2.JPG)
 
