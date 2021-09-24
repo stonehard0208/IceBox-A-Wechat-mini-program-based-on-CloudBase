@@ -6,7 +6,7 @@ typora-root-url: img
 
 ## 目录
 
-[简介 Brief Introduction](#简介 Brief Introduction：)
+[简介 Brief Introduction](#简介-Brief-Introduction：)
 
 [功能界面 Interface](#功能界面：)
 
