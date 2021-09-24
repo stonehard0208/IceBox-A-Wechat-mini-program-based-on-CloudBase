@@ -8,9 +8,9 @@ typora-root-url: img
 
 [简介 Brief Introduction](#简介-brief-introduction)
 
-[功能界面 Interface](#功能界面：)
+[功能界面 Interface](#功能界面-interface)
 
-[数据库结构 Database Structure](#数据库结构：)
+[数据库结构 Database Structure](#数据库结构-database-structure)
 
 
 
