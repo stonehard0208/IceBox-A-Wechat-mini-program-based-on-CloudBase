@@ -42,7 +42,7 @@ This is an application oriented to the anti-food waste law. With refrigerator st
 
 ![10](img/10.JPG)
 
-![11](/11.JPG)
+![11](img/11.JPG)
 
 ![12](img/12.JPG)
 
