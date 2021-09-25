@@ -76,8 +76,8 @@ Page({
       dataType: "json",
       data: {
         grant_type: 'client_credentials',
-        client_id: 'luPM1MliFpLK2hwtwgZRf7j9',
-        client_secret: 'L1FN6eDka4UOtHYrWv20AYlevNctnPaG'//自己的
+        client_id: 'YOUR CLIENT ID',
+        client_secret: 'YOUR CLIENT SECRET'//自己的
       },
       header: {
         'content-type': 'application/json'
